@@ -102,6 +102,8 @@ qSection.appendChild(qArticle);
 let qQuestion = document.createElement('div');
 qQuestion.setAttribute('class','question');
 qArticle.appendChild(qQuestion);
+qQuestion.id= `question${i+1}`;
+
 
 
 
@@ -111,11 +113,12 @@ qArticle.appendChild(qOption1Container);
 let qOption1 = document.createElement('label');
 qOption1Container.appendChild(qOption1);
 qOption1.setAttribute('class','option1');
-qOption1.setAttribute('for',`${i}`);
+qOption1.setAttribute('for',`a${i}`);
 let aOption1 = document.createElement('input');
 aOption1.name=i;
 aOption1.setAttribute('type','radio');
-aOption1.id=i;
+aOption1.id=`a${i}`;
+aOption1.value=1;
 qOption1Container.appendChild(aOption1);
 
 let qOption2Container= document.createElement('div');
@@ -124,11 +127,12 @@ qArticle.appendChild(qOption2Container);
 let qOption2 = document.createElement('label');
 qOption2Container.appendChild(qOption2);
 qOption2.setAttribute('class','option2');
-qOption2.setAttribute('for',`${i}`);
+qOption2.setAttribute('for',`b${i}`);
 let aOption2 = document.createElement('input');
 aOption2.name= i;
 aOption2.setAttribute('type','radio');
-aOption2.id=i;
+aOption2.id=`b${i}`;
+aOption2.value=2;
 qOption2Container.appendChild(aOption2);
 
 
@@ -138,11 +142,12 @@ qArticle.appendChild(qOption3Container);
 let qOption3 = document.createElement('label');
 qOption3Container.appendChild(qOption3);
 qOption3.setAttribute('class','option3');
-qOption3.setAttribute('for',`${i}`);
+qOption3.setAttribute('for',`c${i}`);
 let aOption3 = document.createElement('input');
 aOption3.name= i;
 aOption3.setAttribute('type','radio');
-aOption3.id=i;
+aOption3.id=`c${i}`;
+aOption3.value=3;
 qOption3Container.appendChild(aOption3);
 
 let qOption4Container= document.createElement('div');
@@ -151,11 +156,12 @@ qArticle.appendChild(qOption4Container);
 let qOption4 = document.createElement('label');
 qOption4Container.appendChild(qOption4);
 qOption4.setAttribute('class','option4');
-qOption4.setAttribute('for',`${i}`);
+qOption4.setAttribute('for',`d${i}`);
 let aOption4 = document.createElement('input');
 aOption4.name= i;
 aOption4.setAttribute('type','radio');
-aOption4.id= i;
+aOption4.id= `d${i}`;
+aOption4.value=4;
 qOption4Container.appendChild(aOption4); 
 
 /* qQuestion.textContent= object.question;
