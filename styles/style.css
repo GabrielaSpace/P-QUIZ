@@ -54,7 +54,7 @@ h1{
     font-weight: bold;
 }
 
-.option1, .option2, .option3, .option4{
+.option{
     background-color: #FAEAB1;
     color: #C58940;
     width: auto;
@@ -66,40 +66,15 @@ h1{
     text-align: center;
     font-weight: bold;
 }
-
-/* 
-input [type='radio']:checked + label{
+input [type=radio]{
+    display: none;
+}
+input [type=radio]:checked + label{
     background-color: #698474;
 }
  
- */
 
 
-img{
-    width: 95%;
-    height: 180px;
-    padding: 10px;
-}
 
 
-a{
-    text-align: center;
-    padding: 5px;
-}
-
-a:hover{
-    color: #ffaaa5;
-}
-
-.title{
-    color: #698474;
-    font-size: 20px;
-    font-weight: 200px;
-
-}
-.author{
-    color: #ffaaa5;
-    font-size: 17px;
-    font-weight: 200px;
-} */
 
