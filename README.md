@@ -7,7 +7,3 @@ Cuando hagas "Enviar", se realizará la validación del formulario
 Requisitos
 Manipulación dinámica del DOM
 Sin frameworks ni librerias externas en la medida de lo posible
-Gestión del proyecto desde el inicio en un único repositorio en Github. Usar el sistema de ramas, main, develop, etc... como hemos visto en clase.
-Código limpio, buenas prácticas
-Documentar bien el README
-Subirlo GitHub Pages y compartid el enlace (y ponedlo en el fichero Readme).
