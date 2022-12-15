@@ -1,6 +1,3 @@
-
-
-
 const questions = [
     {
         'question': 'PREGUNTA1',
@@ -90,15 +87,25 @@ let correctAnswers ={
 
 let qheader=document.createElement('header');
 document.body.appendChild(qheader);
-let qInstructions=document.createElement('a');
-qInstructions.setAttribute('class','boton');
-qheader.appendChild(qInstructions);
-qInstructions.textContent='Instructions';
 
 let qMain= document.createElement('main');
 document.body.appendChild(qMain);
+
 let qSection = document.createElement('section');
 qMain.appendChild(qSection);
+
+let resultados = document.createElement('section');
+resultados.setAttribute('id','resultados');
+qMain.appendChild(resultados);
+
+
+
+
+
+
+document.querySelector('#quizform').addEventListener('submit', function (event) {
+    event.preventDefault();
+
 
 
 for (let i =0; i <questions.length;i++){
@@ -130,7 +137,7 @@ aOption1.name=`question${i+1}`;
 aOption1.setAttribute('type','radio');
 aOption1.id=`a${i}`;
 aOption1.value='a';
-// aOption1.setAttribute('onclick', `respuesta(${i+1},this)`);
+aOption1.setAttribute('onclick', `respuesta(${i+1},this)`);
 qOption1Container.appendChild(aOption1);
 
 let qOption2Container= document.createElement('div');
@@ -145,7 +152,7 @@ aOption2.name= `question${i+1}`;
 aOption2.setAttribute('type','radio');
 aOption2.id=`b${i}`;
 aOption2.value='b';
-// aOption2.setAttribute('onclick', `respuesta(${i+1},this)`);
+aOption2.setAttribute('onclick', `respuesta(${i+1},this)`);
 qOption2Container.appendChild(aOption2);
 
 
@@ -161,7 +168,7 @@ aOption3.name= `question${i+1}`;
 aOption3.setAttribute('type','radio');
 aOption3.id=`c${i}`;
 aOption3.value='c';
-// aOption3.setAttribute('onclick', `respuesta(${i+1},this)`);
+aOption3.setAttribute('onclick', `respuesta(${i+1},this)`);
 qOption3Container.appendChild(aOption3);
 
 let qOption4Container= document.createElement('div');
@@ -176,7 +183,7 @@ aOption4.name= `question${i+1}`;
 aOption4.setAttribute('type','radio');
 aOption4.id= `d${i}`;
 aOption4.value='d';
-// aOption4.setAttribute('onclick', `respuesta(${i+1},this)`);
+aOption4.setAttribute('onclick', `respuesta(${i+1},this)`);
 qOption4Container.appendChild(aOption4); 
 
 /* qQuestion.textContent= object.question;
@@ -194,3 +201,29 @@ document.getElementsByClassName('option4')[i].innerHTML = object.option4;
 }
 
 
+})
+
+let button = document.querySelector("button");
+button.addEventListener("click", function() {
+
+    let correctAnswers = ['a','c','b','a','d','d','b','c','c','d']
+    let userAnswers = [];
+    let answerXQ =[];
+    let correctAnswersCounter =0;
+    let incorrectAnswersCounter =0;
+    let questionsAnswered =0;
+    
+    for (let i = 0; i < correctAnswers.length; i++) {
+        answerXQ =document.getElementsByName(`question${i+1}`);
+        for (let j=0;j<=3;j++ ){
+            if (answerXQ[j].checked===true){
+                questionsAnswered++;
+                userAnswers[i]=answerXQ[j].value;
+                answerXQ[j].value== respuestasCorrectas[i]? correctAnswersCounter++: incorrectAnswersCounter++  
+                document.getElementById('score').innerHTML = correctAnswersCounter;
+                document.getElementById('score').innerHTML = incorrectAnswersCounter;
+                questionsAnswered==10 ? document.write('has respondido todo'): document.write(`te faltaron por responder ${10-questionsAnswered}`);
+            }}
+        } 
+    } 
+)
