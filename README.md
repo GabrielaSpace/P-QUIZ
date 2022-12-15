@@ -1,4 +1,4 @@
-Proyecto para crear un juego de preguntas y respuestas múltiples aplicando los conocimientos de JavaScript aprendidos hasta el momento. Enviar la URL del repositorio en el que lo hayáis subido. 
+
 
 Objetivo
 El Quiz constará de 10 preguntas. Cada pregunta tendrá 4 opciones y sólo una de ellas será la correcta.
