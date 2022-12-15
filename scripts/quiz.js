@@ -1,3 +1,6 @@
+
+
+
 const questions = [
     {
         'question': 'PREGUNTA1',
@@ -5,6 +8,7 @@ const questions = [
         'option2': '4',
         'option3': '7',
         'option4': '2',
+
 
     },
     {
@@ -71,7 +75,17 @@ const questions = [
         'option4': '2',
     }]
       
-
+let correctAnswers ={
+    correctAnswer1:'a',
+    correctAnswer2:'c',
+    correctAnswer3:'b',
+    correctAnswer4:'a',
+    correctAnswer5:'d',
+    correctAnswer6:'d',
+    correctAnswer7:'b',
+    correctAnswer8:'c',
+    correctAnswer9:'c'
+};
 
 
 let qheader=document.createElement('header');
@@ -98,13 +112,10 @@ function allQuestions(object,i) {
 let qArticle = document.createElement('article');
 qArticle.setAttribute('class','qcontainer');
 qSection.appendChild(qArticle);
-
 let qQuestion = document.createElement('div');
 qQuestion.setAttribute('class','question');
 qArticle.appendChild(qQuestion);
 qQuestion.id= `question${i+1}`;
-
-
 
 
 let qOption1Container= document.createElement('div');
@@ -115,10 +126,11 @@ qOption1Container.appendChild(qOption1);
 qOption1.setAttribute('class','option1');
 qOption1.setAttribute('for',`a${i}`);
 let aOption1 = document.createElement('input');
-aOption1.name=i;
+aOption1.name=`question${i+1}`;
 aOption1.setAttribute('type','radio');
 aOption1.id=`a${i}`;
-aOption1.value=1;
+aOption1.value='a';
+// aOption1.setAttribute('onclick', `respuesta(${i+1},this)`);
 qOption1Container.appendChild(aOption1);
 
 let qOption2Container= document.createElement('div');
@@ -129,10 +141,11 @@ qOption2Container.appendChild(qOption2);
 qOption2.setAttribute('class','option2');
 qOption2.setAttribute('for',`b${i}`);
 let aOption2 = document.createElement('input');
-aOption2.name= i;
+aOption2.name= `question${i+1}`;
 aOption2.setAttribute('type','radio');
 aOption2.id=`b${i}`;
-aOption2.value=2;
+aOption2.value='b';
+// aOption2.setAttribute('onclick', `respuesta(${i+1},this)`);
 qOption2Container.appendChild(aOption2);
 
 
@@ -144,10 +157,11 @@ qOption3Container.appendChild(qOption3);
 qOption3.setAttribute('class','option3');
 qOption3.setAttribute('for',`c${i}`);
 let aOption3 = document.createElement('input');
-aOption3.name= i;
+aOption3.name= `question${i+1}`;
 aOption3.setAttribute('type','radio');
 aOption3.id=`c${i}`;
-aOption3.value=3;
+aOption3.value='c';
+// aOption3.setAttribute('onclick', `respuesta(${i+1},this)`);
 qOption3Container.appendChild(aOption3);
 
 let qOption4Container= document.createElement('div');
@@ -158,10 +172,11 @@ qOption4Container.appendChild(qOption4);
 qOption4.setAttribute('class','option4');
 qOption4.setAttribute('for',`d${i}`);
 let aOption4 = document.createElement('input');
-aOption4.name= i;
+aOption4.name= `question${i+1}`;
 aOption4.setAttribute('type','radio');
 aOption4.id= `d${i}`;
-aOption4.value=4;
+aOption4.value='d';
+// aOption4.setAttribute('onclick', `respuesta(${i+1},this)`);
 qOption4Container.appendChild(aOption4); 
 
 /* qQuestion.textContent= object.question;
@@ -177,3 +192,5 @@ document.getElementsByClassName('option2')[i].innerHTML = object.option2;
 document.getElementsByClassName('option3')[i].innerHTML = object.option3;
 document.getElementsByClassName('option4')[i].innerHTML = object.option4;
 }
+
+
