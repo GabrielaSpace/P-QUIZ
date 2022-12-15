@@ -94,10 +94,6 @@ document.body.appendChild(qMain);
 let qSection = document.createElement('section');
 qMain.appendChild(qSection);
 
-let resultados = document.createElement('section');
-resultados.setAttribute('id','resultados');
-qMain.appendChild(resultados);
-
 
 for (let i =0; i <questions.length;i++){
 
@@ -191,5 +187,3 @@ document.getElementsByClassName('option3')[i].innerHTML = object.option3;
 document.getElementsByClassName('option4')[i].innerHTML = object.option4;
 }
 
-
-})
