@@ -99,15 +99,6 @@ resultados.setAttribute('id','resultados');
 qMain.appendChild(resultados);
 
 
-
-
-
-
-document.querySelector('#quizform').addEventListener('submit', function (event) {
-    event.preventDefault();
-
-
-
 for (let i =0; i <questions.length;i++){
 
   allQuestions (questions[i],i);
@@ -202,28 +193,3 @@ document.getElementsByClassName('option4')[i].innerHTML = object.option4;
 
 
 })
-
-let button = document.querySelector("button");
-button.addEventListener("click", function() {
-
-    let correctAnswers = ['a','c','b','a','d','d','b','c','c','d']
-    let userAnswers = [];
-    let answerXQ =[];
-    let correctAnswersCounter =0;
-    let incorrectAnswersCounter =0;
-    let questionsAnswered =0;
-    
-    for (let i = 0; i < correctAnswers.length; i++) {
-        answerXQ =document.getElementsByName(`question${i+1}`);
-        for (let j=0;j<=3;j++ ){
-            if (answerXQ[j].checked===true){
-                questionsAnswered++;
-                userAnswers[i]=answerXQ[j].value;
-                answerXQ[j].value== respuestasCorrectas[i]? correctAnswersCounter++: incorrectAnswersCounter++  
-                document.getElementById('score').innerHTML = correctAnswersCounter;
-                document.getElementById('score').innerHTML = incorrectAnswersCounter;
-                questionsAnswered==10 ? document.write('has respondido todo'): document.write(`te faltaron por responder ${10-questionsAnswered}`);
-            }}
-        } 
-    } 
-)
