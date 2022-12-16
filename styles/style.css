@@ -3,7 +3,7 @@ body{
     transition: all 200ms;
 }
 
-header, section{
+form{
     background-color:#E5BA73;
     padding: 7px;
     display: flex;

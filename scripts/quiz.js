@@ -187,9 +187,18 @@ document.getElementsByClassName('option3')[i].innerHTML = object.option3;
 document.getElementsByClassName('option4')[i].innerHTML = object.option4;
 }
 
-let button = document.querySelector("button");
-button.addEventListener("click", function() {
 
+let boton = createElement('button');
+boton.setAttribute('type','submit');
+boton.textContent='Enviar respuestas';
+qSection.appendChild(boton);
+
+
+
+
+
+document.querySelector('form').addEventListener("submit", function(event) {
+    event.preventDefault();
     let correctAnswers = ['a','c','b','a','d','d','b','c','c','d']
     let userAnswers = [];
     let answerXQ =[];
@@ -203,7 +212,7 @@ button.addEventListener("click", function() {
             if (answerXQ[j].checked===true){
                 questionsAnswered++;
                 userAnswers[i]=answerXQ[j].value;
-                answerXQ[j].value== respuestasCorrectas[i]? correctAnswersCounter++: incorrectAnswersCounter++  
+                answerXQ[j].value== correctAnswers[i]? correctAnswersCounter++: incorrectAnswersCounter++  
                 document.getElementById('score').innerHTML = correctAnswersCounter;
                 document.getElementById('score').innerHTML = incorrectAnswersCounter;
                 questionsAnswered==10 ? document.write('has respondido todo'): document.write(`te faltaron por responder ${10-questionsAnswered}`);
