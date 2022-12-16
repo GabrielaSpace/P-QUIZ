@@ -190,7 +190,7 @@ document.getElementsByClassName('option4')[i].innerHTML = object.option4;
 
 let boton = createElement('button');
 boton.setAttribute('type','submit');
-boton.textContent='Enviar respuestas';
+boton.value='Enviar respuestas';
 qSection.appendChild(boton);
 
 
