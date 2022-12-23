@@ -182,7 +182,7 @@ boton.setAttribute('type','submit');
 boton.textContent='Submit';
 qForm.appendChild(boton);
 
-
+/* 
     //validación por pregunta 
             let inputs = document.querySelectorAll('input[type=radio]:checked');
             let values=[];
@@ -197,3 +197,4 @@ qForm.appendChild(boton);
 
             let score =document.querySelector('i');
             score.innerHTML = correctCounter +'/10';
+ */
